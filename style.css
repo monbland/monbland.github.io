@@ -19,6 +19,7 @@ body {
     font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
 }
+
 .box-1-logo {
     background-image: url("assets/img/logo.png");
     background-size: contain;
@@ -26,8 +27,8 @@ body {
     background-position: center;
 }
 
-.box-1-contacts a{
-    text-align: end;
+.box-1 button {
+    font-size: 1.4rem;
 }
 
 .box-1-portfolio a{
@@ -65,4 +66,47 @@ body {
 
 .info-column-2 {
     border-left: 1px solid #ff13a7;
+}
+
+.contacts a {
+    color: #ff13a7;
+}
+
+.portfolio a {
+    color: #ff13a7;
+}
+
+.contact-phone {
+    background-image: url("assets/img/phone.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-mail {
+    background-image: url("assets/img/mail.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-telegram {
+    background-image: url("assets/img/telegram.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-vk {
+    background-image: url("assets/img/vk.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-inst {
+    background-image: url("assets/img/inst.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

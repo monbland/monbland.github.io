@@ -7,17 +7,19 @@
     <title>Moonbland's resume</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="row justify-content-between box-1 vh-10">
             <div class="col-2 box-1-contacts vh-10 d-flex align-items-center justify-content-end">
-                <div><a href="">Контакты</a></div>
+                <div><button type="button" class="btn" data-toggle="modal" data-target="#Modal-contacts">Контакты</button></div>
             </div>
             <div class="col-3 box-1-logo vh-10"></div>
             <div class="col-2 box-1-portfolio vh-10 d-flex align-items-center justify-content-start">
-                <div><a href="">Портфолио</a></div>
+                <div><button type="button" class="btn" data-toggle="modal" data-target="#Modal-portfolio">Портфолио</button></div>
             </div>
         </div>
         <div class="row vh-80 box-2">
@@ -52,7 +54,69 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="Modal-contacts" tabindex="-1" role="dialog" aria-labelledby="Modal-contacts-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Контакты</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row contacts">
+                            <div class="col-1 contact-phone"></div>
+                            <div class="col-11">
+                                <a title="Телефон" href="tel:+79998696088">+7-(999)-869-60-88</a>
+                            </div>
+                            <div class="col-1 contact-mail"></div>
+                            <div class="col-11">
+                                <a title="E-mail" href="mailto:mitkin_ai@mail.ru">Mitkin_AI@mail.ru</a>
+                            </div>
+                            <div class="col-1 contact-telegram"></div>
+                            <div class="col-11">
+                                <a title="Telegram" href="tg://resolve?domain=moonbland">@moonbland</a>
+                            </div>
+                            <div class="col-1 contact-vk"></div>
+                            <div class="col-11">
+                                <a title="VK" href="https://vk.me/id24177599">Митькин Андрей</a>
+                            </div>
+                            <div class="col-1 contact-inst"></div>
+                            <div class="col-11">
+                                <a title="Instagram" href="https://instagram.com/monbland_eriko/">monbland_eriko</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="Modal-portfolio" tabindex="-1" role="dialog" aria-labelledby="Modal-portfolio-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Портфолио</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row portfolio">
+                                <div class="col-12 sirius">
+                                    <a title="sirius landing" href="portfolio/sirius-landing/index.html">Sirius Invest Landing</a>
+                                </div>
+                                <div class="col-12 credit">
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
