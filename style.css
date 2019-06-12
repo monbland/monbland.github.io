@@ -1,0 +1,68 @@
+.vh-10 {
+    min-height: 10vh;
+}
+
+.vh-30 {
+    min-height: 30vh;
+}
+
+.vh-50 {
+    min-height: 50vh;
+}
+
+.vh-80 {
+    min-height: 80vh;
+}
+
+body {
+    background-color: rgba(204, 153, 204, 0.3);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+}
+.box-1-logo {
+    background-image: url("assets/img/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-1-contacts a{
+    text-align: end;
+}
+
+.box-1-portfolio a{
+    text-align: start;
+}
+
+.box-2 {
+    border-image: linear-gradient(to bottom right, #ff13a7, #ff1300) 1 1;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.info-photo {
+    background-image: url("assets/img/photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-image: linear-gradient(to bottom right, #ff13a7, #ff1300) 1 1;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.info-header-left {
+    padding-top: 2vh;
+    padding-left: 2vh;
+}
+
+.info-header-right {
+    padding-top: 2vh;
+}
+
+.info-column-1 p {
+    text-align: end;
+}
+
+.info-column-2 {
+    border-left: 1px solid #ff13a7;
+}
