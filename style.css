@@ -1,0 +1,413 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: "GeometriaBold";
+    src: url("assets/fonts/Geometria/Geometria-Bold.woff") format("woff2");
+}
+
+@font-face {
+    font-family: "GeometriaExtraBold";
+    src: url("assets/fonts/Geometria/Geometria-ExtraBold.woff") format("woff2");
+}
+
+@font-face {
+    font-family: "GeometriaHeavy";
+    src: url("assets/fonts/Geometria/Geometria-Heavy.woff") format("woff2");
+}
+
+@font-face {
+    font-family: "GilroyRegular";
+    src: url("assets/fonts/Gilroy/Gilroy-Regular.woff") format("woff2");
+}
+
+@font-face {
+    font-family: "GilroyBold";
+    src: url("assets/fonts/Gilroy/Gilroy-Bold.woff") format("woff2");
+}
+
+/* Классы для высоты блоков */
+
+.vh-105 {
+    min-height: 105vh;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}
+
+.vh-50 {
+    min-height: 50vh;
+}
+
+.vh-20 {
+    min-height: 20vh;
+}
+
+.vh-10 {
+    min-height: 10vh;
+}
+
+/* класс для отсутствия отступа */
+
+.margin-none {
+    margin-bottom: 0 !important;
+}
+
+/* стиль для body позваоляющий добавить анимацию картинки  */
+
+body {
+    transform-style: preserve-3d;
+    transform: perspective(800px);
+}
+
+/*
+Для удобства все пространство страницы поделено на систему блоков:
+block-1 - блок с логотипом, текстом и кнопкой "вниз"
+block-2 - блок обратной связи с полями для ввода
+block-3 - блок с списком
+block-4 - блок с картинкой
+block-5 - блок с текстом внизу страницы и кнопкой обратной связи
+block-6 - блок обратной связи с полями для ввода, появляющийся на маленьких размерах экрана
+block-7 - блок футера
+
+На больших экранах отображаются блоки в вышеуказанном порядке, кроме block-6, в соответствии с макетом.
+На маленьких экранах исчезают block-2 и block-4, а также появляется block-6 в нижней части экрана. 
+
+Также вся страница при отображении на болших экранах для удобства визуально поделена на экраны:
+Первый экран: block-1, block-2
+Второй экран: block-3, block-4
+Третий экран: block-5, block-7
+*/
+
+/* Первый экран */
+
+.block-1 {
+    background: url("assets/img/bg_header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    min-height: 105vh; 
+    padding-left: 10% !important;
+}
+
+.header-logo {
+    padding-top: 2vh !important;
+    padding-left: 0 !important;
+    min-height: 12vh;
+}
+
+.header-logo img {
+    height: 2.3em;
+}
+
+.header-text {
+    font-size: 1em;
+    min-height: 73vh;
+    padding-top: 15vh;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    color: white;
+}
+
+.header-text-1 {
+    font-family: GeometriaExtraBold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.header-text-2 {
+    font-family: GeometriaExtraBold;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.header-text-3 {
+    font-family: GilroyRegular;
+    font-size: 1rem;
+}
+
+.header-button {
+    min-height: 15vh;
+}
+
+.header-button a {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.block-2 {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: #f1f5fe;
+}
+
+.header-callback-phone {
+    padding-top: 2% !important;
+    min-height: 12vh;
+    text-align: center;
+}
+
+.header-callback-phone object {
+    height: 2em;
+}
+
+.header-callback-phone span {
+    font-family: 'GilroyBold';
+    color: #3a46bd;
+    vertical-align: 50%;
+}
+
+.header-callback {
+    text-align: center;
+    padding-top: 15vh;
+}
+
+.header-callback p {
+    font-family: "GilroyRegular";
+    color: #000b75;
+}
+
+.header-callback span {
+    font-family: "GilroyBold";
+}
+
+.header-callback-input input {
+    font-family: "GilroyRegular";
+    margin-bottom: 1em;
+    color: #b3b3b3;
+    width: 20rem;
+}
+
+.header-callback-input button {
+    font-family: "GilroyBold";
+    font-size: 1.2em;
+    background: linear-gradient(to right, #209bdf, #4f34ad);
+    background-size: cover;
+    height: 4rem;
+    width: 20rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+.header-callback-input p {
+    font-family: "GilroyRegular";
+    color: #000b75;
+}
+
+.header-callback-input span {
+    font-family: "GilroyBold";
+}
+
+/* Второй экран */
+
+.block-3 {
+    font-size: 1em;
+    padding: 15% 0 !important;
+    padding-bottom: 10% !important;
+    text-indent: 0;
+    color: #000b75;
+}
+
+.block-3 h1 {
+    font-family: "GeometriaBold";
+    text-transform: uppercase;
+}
+
+ol {
+    counter-reset: myCounter;
+    padding-inline-start: 0;
+    line-height: 1em;
+    font-family: "GilroyRegular";
+}
+
+li {
+    list-style: none;
+}
+
+.num-position {
+    opacity: .5;
+    font-family: "GeometriaHeavy";
+    font-weight: bolder;
+    font-size: 2.5em;
+    position: relative;
+    top: .25em;
+    right: .25em;
+    left: auto;
+}
+
+.block-4 .pic {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    background-image: url("assets/img/pic.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transition: 0.1s;
+    display: inline-block
+}
+
+/* Третий экран */
+
+.body-bottom-waves {
+    background-image: url("assets/img/waves.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.body-bottom-text {
+    background-color: rgba(74, 78, 178, 0.2);
+    min-height: 15vh;
+    text-align: center;
+    color: #000b75;
+}
+
+.body-bottom-text span {
+    font-family: "GilroyBold";
+}
+
+.body-bottom-button {
+    background-color: rgba(74, 78, 178, 0.2);
+    min-height: 10vh;
+    text-align: center;
+}
+
+.body-bottom-button button {
+    height: 2.5rem;
+    width: 12rem;
+    background-color: #ddddf0;
+    /* color: #2366d3; */
+    border-radius: 1.25em;
+    font-family: "GilroyBold";
+}
+
+.body-bottom-button-border {
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, #209bdf, #4f34ad);
+    padding: 2px;
+    border-radius: 1.25em;
+}
+
+.body-bottom-button-border span {
+    background: linear-gradient(to right,#4f9ee2, #3c43ba);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.block-6 {
+    background-color: rgba(74, 78, 178, 0.2);
+}
+
+.footer-callback {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: #f1f5fe;
+    max-height: 60vh;
+    max-width: 50vh;
+}
+
+.footer-callback-text {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.footer-callback-phone {
+    padding-top: 2% !important;
+    min-height: 12vh;
+    text-align: center;
+}
+
+.footer-callback-phone object {
+    height: 2em;
+}
+
+.footer-callback-phone span {
+    font-family: 'GilroyBold';
+    color: #3a46bd;
+    vertical-align: 50%;
+}
+
+.footer-callback p {
+    font-family: "GilroyRegular";
+    color: #000b75;
+}
+
+.footer-callback span {
+    font-family: "GilroyBold";
+}
+
+.footer-callback-input input {
+    font-family: "GilroyRegular";
+    margin-bottom: 1em;
+    color: #b3b3b3;
+    width: 20rem;
+}
+
+.footer-callback-input button {
+    font-family: "GilroyBold";
+    font-size: 1.2em;
+    background: linear-gradient(to right, #209bdf, #4f34ad);
+    background-size: cover;
+    height: 4rem;
+    width: 20rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+.footer-callback-input p {
+    font-family: "GilroyRegular";
+    color: #000b75;
+}
+
+.footer-callback-input span {
+    font-family: "GilroyBold";
+}
+
+/* Нижний колонтитул */
+
+.block-7 {
+    background: url("assets/img/bg_footer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.foot-logo img {
+    height: 2.3em;
+}
+
+.foot-privacy a {
+    
+    font-family: "GilroyBold";
+    color: #b4c8f4;
+    margin-bottom: 0;
+}
+
+.foot-privacy a:hover {
+    text-decoration: none;
+}
+
+.foot-contacts {
+    font-family: "GilroyRegular";
+    color: #b4c8f4;
+    line-height: 1em;
+}
+
+.foot-contacts span {
+    text-transform: uppercase;
+}
+
+/* Реакция на изменение размера экрана */
+
+@media screen and (max-width: 992px) {
+    .wraper { 
+        background-size: 100vw 100vh !important;
+    }
+}
+
+/* Чеклист:
+подогнать шрифты                    o
+анимация картинки                   x
+анимации переходов                  x
+переработать размер block-6         x
+*/         
