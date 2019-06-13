@@ -107,4 +107,7 @@ body {
     .vh-photo { 
         min-height: 50vh;
     }
+    body {
+        font-size: 1rem;
+    }
 }
