@@ -12,13 +12,20 @@ button.onclick = function() {
     var annualMaintenance = +document.getElementById("annual-maintenance").value;
     var debetPercent = +document.getElementById("debet-percent").value / 36500;
     var days = +document.getElementById("days-range").value;
+    var dayStart = moment(document.getElementById("day-start").value);
+    if (dayStart._isValid == false) {
+        document.getElementById('day-start').value = moment().format("YYYY-MM-DD");
+        dayStart = moment();
+    }
     var debetBalance = 0;
     var withdrawalTimers = new WithdrawalTimer;
     withdrawalTimers = [];
     var profitCount = [];
     var dayCount = [];
     profitCount[0] = -annualMaintenance;
-    dayCount[0] = 0;
+    var dayCountMoment = []
+    dayCountMoment[0] = dayStart;
+    dayCount[0] = dayStart.format('D.M.YY');
     var creditTimer = 0;
     var profitDay = -2;
     var profitDayProfit = 0;
@@ -48,8 +55,9 @@ button.onclick = function() {
             debetBalance -= withdrawalTimers[0].withdrawal;
             withdrawalTimers.shift({});
         };
-        profitCount[day + 1] = profitCount[day] +  debetBalance * debetPercent;
-        dayCount[day + 1] = day + 1;
+        profitCount[day + 1] = Math.round((profitCount[day] +  debetBalance * debetPercent) * 100) / 100;
+        dayCountMoment[day+1] = dayCountMoment[day].add(1,'d');
+        dayCount[day + 1] = dayCountMoment[day+1].format('D.M.YY');
         for (var i = 0; i < withdrawalTimers.length; i++) {
             withdrawalTimers[i].timer--;
         };
@@ -76,10 +84,12 @@ button.onclick = function() {
             feature: {
                 dataZoom: {
                     title: {
-                        zoom: 'Приблизить',
-                        back: 'Вернуть исходный масштаб'
+                        zoom: 'Приблизить'
                     },
                     yAxisIndex: 'none'
+                },
+                restore: {
+                    title: 'Восстановить масштаб'
                 },
                 saveAsImage: {
                     title: 'Сохранить как картинку'
@@ -94,7 +104,7 @@ button.onclick = function() {
             type: 'value'
         },
         series: [{
-            name: 'сумма накопленных процентов',
+            name: 'доход',
             type: 'line',
             smooth: true,
             data: profitCount,
