@@ -2,16 +2,8 @@
     min-height: 10vh;
 }
 
-.vh-30 {
+.vh-photo {
     min-height: 30vh;
-}
-
-.vh-50 {
-    min-height: 50vh;
-}
-
-.vh-80 {
-    min-height: 80vh;
 }
 
 body {
@@ -109,4 +101,10 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .vh-photo { 
+        min-height: 50vh;
+    }
 }
