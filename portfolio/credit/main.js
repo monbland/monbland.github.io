@@ -152,12 +152,10 @@ button.onclick = function() {
     document.getElementById("profit").value = dayCount.profit[days];
     buttonZoom.removeAttribute("disabled");
 }
-console.log(buttonZoom);
 buttonZoom.onclick = function () {
     var dateStart, dateEnd;
     dateStart = new Date(document.getElementById("days-range-start").value).valueOf();
     dateEnd = new Date(document.getElementById("days-range-end").value).valueOf();
-    console.log(document.getElementById("days-range-start").value);
     let bool = document.getElementById("days-range-start").value!=""&&document.getElementById("days-range-end").value!="";
     switch (true) {
         case dateStart<startDay||dateEnd>(startDay + document.getElementById("days-range").value * ONEDAY):
