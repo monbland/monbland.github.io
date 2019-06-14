@@ -7,6 +7,13 @@
     <title>Расчет выгоды от финансовых махинаций</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
     <script src="moment-with-locales.js"></script>
 </head>
 <body>
@@ -38,8 +45,13 @@
                         <input type="text" readonly class="form-control-plaintext" id="day-profit" value="">
                         <label for="profit">Общий доход за период</label>
                         <input type="text" readonly class="form-control-plaintext" id="profit" value="">
-                        <label for=""></label>
-                        <input type="text" readonly class="form-control-plaintext" id="" value="">
+                        <label for="days-range-start">Отобразить конкретный диапазон дней на графике<br>Начало диапазона</label>
+                        <input type="date" class="form-control" id="days-range-start" value="">
+                        <label for="days-range-end">Конец диапазона</label>
+                        <input type="date" class="form-control" id="days-range-end" value="">
+                    </div>
+                    <div class="pl-3">
+                        <button id="button-range-zoom" type="button" class="btn btn-outline-dark">zoom</button>
                     </div>
                 </form>
             </div>
@@ -51,7 +63,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script>
-        document.getElementById('day-start').value = moment().format("YYYY-MM-DD");
+        document.getElementById("day-start").value = moment().format("YYYY-MM-DD");
+        document.getElementById("days-range-start").value = moment().add(1, "w").format("YYYY-MM-DD");
+        document.getElementById("days-range-end").value = moment().add(5, "w").format("YYYY-MM-DD");
     </script>
 </body>
 </html>
