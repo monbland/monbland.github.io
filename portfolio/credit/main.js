@@ -2,14 +2,11 @@ var ONEDAY = 86400000;
 var myChart = echarts.init(document.getElementById('main-chart'));
 var button = document.getElementById("button-go");
 var profitCount = [];
-var startDay
-// class DayProfit {
-//     constructor(num, str, profit) {
-//         this.num = num;
-//         this.str = str;
-//         this.profit = profit;
-//     }
-// }
+var startDay;
+var buttonZoom = document.getElementById("button-range-zoom");
+function momentFormat(data) {
+    return moment(data).format("ll");
+};
 button.onclick = function() {
     class WithdrawalTimer {
         constructor(timer, withdrawal) {
@@ -93,7 +90,14 @@ button.onclick = function() {
             text: 'График прибыли'
         },
         tooltip: {
-            trigger: 'axis'
+            trigger: 'axis',
+            axisPointer: {
+                label: {
+                    formatter: function (params) {
+                        return momentFormat(dayCount.str[params.value]);
+                    }
+                }
+            }
         },
         toolbox: {
             show: true,
@@ -123,8 +127,7 @@ button.onclick = function() {
             data: dayCount.num,
             axisLabel: {
                 formatter: function (value, index) {
-                    // Formatted to be month/day; display year only in the first label
-                    var label = dayCount.str[value];
+                    var label = momentFormat(dayCount.str[value]);
                     return label;
                 }
             }
@@ -147,13 +150,19 @@ button.onclick = function() {
     myChart.setOption(option);
     document.getElementById("day-profit").value = profitDay;
     document.getElementById("profit").value = dayCount.profit[days];
+    buttonZoom.removeAttribute("disabled");
 }
-document.getElementById("button-range-zoom").onclick = function () {
+console.log(buttonZoom);
+buttonZoom.onclick = function () {
     var dateStart, dateEnd;
     dateStart = new Date(document.getElementById("days-range-start").value).valueOf();
     dateEnd = new Date(document.getElementById("days-range-end").value).valueOf();
+    console.log(document.getElementById("days-range-start").value);
     let bool = document.getElementById("days-range-start").value!=""&&document.getElementById("days-range-end").value!="";
     switch (true) {
+        case dateStart<startDay||dateEnd>(startDay + document.getElementById("days-range").value * ONEDAY):
+            alert("Одна из дат вне диапазона");
+            break;
         case bool&&dateStart<=dateEnd:
             myChart.dispatchAction({
                 type: 'dataZoom',
