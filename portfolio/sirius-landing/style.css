@@ -54,6 +54,9 @@
     min-height: 50vh;
 }
 
+.vh-35 {
+    min-height: 35vh;
+}
 .vh-20 {
     min-height: 20vh;
 }
@@ -148,6 +151,10 @@ block-7 - блок футера
 .header-button a {
     height: 2.4rem;
     width: 2.4rem;
+}
+.header-button img {
+    height: 2.3rem;
+    width: 2.3rem;
 }
 
 .block-2 {
@@ -266,13 +273,13 @@ li {
 .body-bottom-waves {
     background-image: url("assets/img/waves.png");
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    background-position: bottom;
+    background-size: 100% 100%;
 }
 
 .body-bottom-text {
     background-color: rgba(74, 78, 178, 0.2);
-    min-height: 15vh;
+    height: 15vh;
     text-align: center;
     color: #000b75;
 }
@@ -417,6 +424,12 @@ li {
 @media screen and (max-width: 992px) {
     .wraper { 
         background-size: 100vw 100vh !important;
+    }
+    .body-bottom-waves {
+        height: 4vh;
+    }
+    .block-5 {
+        height:14vh;
     }
 }
 
