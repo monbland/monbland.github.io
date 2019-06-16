@@ -1,4 +1,3 @@
-console.log(document.getElementById("picture"));
 var $pic = $(".pic")
 $pic.on("mousemove", function(e) {
     var w, h, offsetPic, offsetX, offsetY, transformPic;
@@ -10,7 +9,6 @@ $pic.on("mousemove", function(e) {
     offsetPic = $pic.data('offset');
     transformPic = 'rotateX(' + -offsetY * offsetPic + 'deg) rotateY(' + offsetX * (offsetPic * 2) + 'deg)';
     $pic.css('transform', transformPic);
-    console.log(e.screenY + " " + e.currentTarget.width+ "  " + h);
 });
 $pic.on('mouseout', function(e) {
     var transformPic = 'translateY(0px) rotateX(0deg) rotateY(0deg)';
