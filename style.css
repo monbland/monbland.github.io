@@ -68,6 +68,13 @@ body {
     color: #ff13a7;
 }
 
+.contact-github {
+    background-image: url("assets/img/git.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .contact-phone {
     background-image: url("assets/img/phone.svg");
     background-size: contain;
