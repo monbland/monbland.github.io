@@ -4,161 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sirius - Надежное Инвестирование</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.min.css">
 </head>
-<body >
-    <div class="container-fluid vh-105" >
-        <div class="row vh-105">
-            <div class="col-12 col-lg-7 block-1 vh-100">
-                <div class="col header-logo">
-                    <img src="assets/img/logo.png"></img>
-                </div>
-                <div class="col header-text">
-                    <p class="header-text-1">Почему традиционные методы инвестирования</p>
-                    <p class="header-text-2">не работают?</p>
-                    <p class="margin-none header-text-3">
-                        Вам же не хочется смотреть, как инфляция пожирает все ваши % с
-                        банковского счёта или как вложение в недвижимость
-                        обесценивается день за днём?
-                    </p>
-                </div>
-                <div class="col header-button p-0" id="navigate">
-                    <a href="#screen-2"><img src="assets/Icons/arrow.svg"></img></a>
-                </div>
-            </div>
-            <div class="col-lg-5 d-none d-lg-block block-2 vh-105" id="callback">
-                <div class="col header-callback-phone d-flex align-items-center">
-                    <div class="flex-fill p-0">
-                        <object type="image/svg+xml" data="assets/Icons/phone.svg"></object>
-                        <span>+7 (495) 208-83-93</span>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-8 box-1">
+                <div class="container">
+                    <div class="row justify-content-lg-center box-1-content">
+                        <div class="col-12 box-1-content-logo align-self-start d-flex align-items-center my-3 pl-5">
+                            <img src="assets/img/logo.webp" alt="logo">
+                        </div>
+                        <div class="col-lg-auto box-1-content-text align-self-center">
+                            <p class="font-lg my-0">Почему традиционные<br>методы инвестирования</p>
+                            <p class="font-xl my-0">не работают?</p>
+                            <p class="font-md box-1-blue-font-color my-0 mt-3">Вам же не хочется смотреть, как инфляция пожирает все ваши % с<br>банковского счёта или как вложение в недвижимость<br>обесценивается день за днём?</p>
+                        </div>
+                        <div class="d-none d-md-flex col-lg-12 align-self-end align-items-center justify-content-center my-5">
+                            <a href="#box-2" class="box-1-content-button"></a>
+                        </div>
+                        <!-- clearfix -->
+                        <div class="d-md-none col"></div>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-auto header-callback align-self-center">
-                        <p>
-                            <span>Оставьте заявку</span> и ваш личный<br>
-                            менеджер расскажет вам, как<br>
-                            практически без рисков получать<br>
-                            <span>15-25%</span> годовых к своим сбережениям 
-                        </p>
-                        <div class="header-callback-input col-12">
-                            <input class="form-control form-control-lg" id="inputName" type="text" placeholder="Имя*">
+            </div>
+            <div class="d-none d-lg-block col-lg-4 form form-1">
+                <div class="container" id="card">
+                    <div class="row justify-content-center box-1-card">
+                        <div class="col-12 box-1-card-phone my-3 d-flex align-items-center font-sm-bold justify-content-center">
+                            <img class="pr-3" src="assets/Icons/auricular-phone-symbol-in-a-circle_icon-icons.com_56570.svg" alt="Phone">
+                            <a href="tel:+7 (495) 208-83-93">+7 (495) 208-83-93</a>
                         </div>
-                        <div class="header-callback-input col-12">
-                            <input class="form-control form-control-lg" id="inputName" type="tel" placeholder="Номер телефона*">
-                        </div>
-                        <div class="header-callback-input col-12">
-                            <button type="button" class="btn">Узнать подробности</button>
-                        </div>
-                        <div class="header-callback-input col-12">
-                            <p>
-                                Осталось бесплатных консультаций: <span>7/50</span>
+                        <div class="col-auto text-center align-self-center">
+                            <p class="font-sm pb-2 box-1-card-text">
+                                <span class="font-sm-bold">Оставьте заявку</span> и ваш личный<br>
+                                менеджер расскажет вам, как<br>
+                                практически без рисков получать<br>
+                                <span class="font-sm-bold">15-25%</span> годовых к своим сбережениям
+                            </p>
+                            <input class="my-2" id="inputName" type="text" placeholder="Имя*"><br>
+                            <input class="my-2" id="inputPhone" type="tel" placeholder="Номер телефона*"><br>
+                            <button type="button" class="box-1-card-btn btn font-btn my-3">Узнать подробности</button>
+                            <p class="font-smc box-1-card-footer">
+                                Осталось бесплатных консультаций: <span class="font-sm-bold">7/50</span>
                             </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="screen-2">
-            <div class="row">
-                <div class="col-12 col-md-7 block-3">
-                    <h1>как вы теряете деньги</h1><br>
-                    <ol>
-                        <span class="num-position">1</span><li>Банк получает с вашего депозита порядка 30% годовых. А что из этого получаете вы?</li><br>
-                        <span class="num-position">2</span><li>Покупка недвижимости "замораживает" ваши деньги и если она начнёт обесцениваться, вы даже не сможете вернуть их.</li><br>
-                        <span class="num-position">3</span><li>Ваши деньги находятся в доверительном управлении? С тем же успехом можете отнести их в казино.</li><br>
-                        <span class="num-position">4</span><li>Вы не вкладываете деньги никуда? Значит, их уничтожает инфляция. И вовсе не медленно.</li><br>
-                        <span class="num-position">5</span><li>Практически любое предложение вложить деньги под более чем 30% годовых - это обман.</li>
-                    </ol>
-                </div>
-                <div class="col-md-5 block-4 d-none d-md-flex align-items-center p-0">
-                    <img class="pic" src="assets/img/pic.svg" id="picture" data-offset="20">
-                </div>
-            </div>
-        </div> 
-        <div class="row">
-            <div class="col-12 body-bottom-waves align-self-end">
-            </div>
-        </div>
-        <div class="row block-5 align-items-end">
-            <div class="col-12 body-bottom-text d-flex align-items-center">
-                <p class="flex-fill">
-                    Узнайте, как <span>преумножать капитал</span> без игр в русскую рулетку и слёз над копейками прибыли.<br>
-                    <span>Прозрачно, законно, не рискуя ни одним рублём.</span><br>
-                    Это вас ни к чему не обязывает.
-                </p>
-            </div>
-            <div class="col-12 d-none d-lg-block body-bottom-button" id="navigate">
-                <a href="#callback">
-                    <div class="body-bottom-button-border">
-                        <button type="button" class="btn">
-                            <span>Отправить заявку</span>
-                        </button>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-center block-6" id="callback">
-            <div class="col-8 d-sm-block d-lg-none vh-50 footer-callback">
-                <div class="col footer-callback-phone d-flex align-items-center">
-                    <div class="flex-fill p-0">
-                        <object type="image/svg+xml" data="assets/Icons/phone.svg"></object>
-                        <span>+7 (495) 208-83-93</span>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 footer-callback-text pt-0">
-                        <p>
-                            <span>Оставьте заявку</span> и ваш личный<br>
-                            менеджер расскажет вам, как<br>
-                            практически без рисков получать<br>
-                            <span>15-25%</span> годовых к своим сбережениям 
-                        </p>
-                    </div>
-                    <div class="footer-callback-input">
-                        <input class="form-control form-control-lg" id="inputName" type="text" placeholder="Имя*">
-                    </div>
-                    <div class="footer-callback-input">
-                        <input class="form-control form-control-lg" id="inputName" type="tel" placeholder="Номер телефона*">
-                    </div>
-                    <div class="footer-callback-input">
-                        <button type="button" class="btn">Узнать подробности</button>
-                    </div>
-                    <div class="footer-callback-input">
-                        <p>
-                            Осталось бесплатных консультаций: <span>7/50</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 vh-10"></div>
-        </div>
-        <div class="row block-7 vh-20">
-            <div class="container">
-                <div class="row d-flex align-items-center vh-20">
-                    <div class="col-2 foot-logo p-0">
-                        <img src="assets/img/logo.png"></img>
-                    </div>
-                    <div class="col-7 foot-privacy p-0">
-                        <a href="">Вакансии</a><br>
-                        <a href="">Политика конфиденциальности</a>
-                    </div>
-                    <div class="col-3 foot-contacts p-0">
-                        <span>ооо <q>сириус</q></span>
-                        <p class="margin-none">Адрес: 105066, г.Москва, ул. Нижняя Красносельская, д. 35, стр. 9, этаж 7</p>
+                        <!-- clearfix -->
+                        <div class="col-12 box-1-card-clearfix align-self-end my-3"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="main.js"></script>
+    <div class="container-fluid">
+        <div class="row box-2" id="box-2">
+            <!-- clearfix -->
+            <div class="col"></div>
+            <div class="col-12 align-self-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-7 box-2-content pr-0">
+                            <p class="font-box-2-header my-0 pb-2">как вы теряете деньги</p>
+                            <ol class="font-sm">
+                                <span class="box-2-list-num font-li">1</span>
+                                <li class="font-sm li" >Банк получает с вашего депозита порядка 30% годовых. А что из этого получаете вы?</li>
+                                <span class="box-2-list-num font-li">2</span>
+                                <li class="font-sm li">Покупка недвижимости "замораживает" ваши деньги и если она начнёт обесцениваться, вы даже не сможете вернуть их.</li>
+                                <span class="box-2-list-num font-li">3</span>
+                                <li class="font-sm li">Ваши деньги находятся в доверительном управлении? С тем же успехом можете отнести их в казино.</li>
+                                <span class="box-2-list-num font-li">4</span>
+                                <li class="font-sm li">Вы не вкладываете деньги никуда? Значит, их уничтожает инфляция. И вовсе не медленно.</li>
+                                <span class="box-2-list-num font-li">5</span>
+                                <li class="font-sm li">Практически любое предложение вложить деньги под более чем 30% годовых - это обман.</li>
+                            </ol>
+                        </div>
+                        <div class="col-12 col-md-5 order-first order-md-2 d-flex align-items-center box-2-img rotate-container">
+                            <img class="rotate rotate-md" src="assets/Illustrations/undraw_setup_analytics_8qkl.svg" alt="Chart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 align-self-end p-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 bg-success1 wave"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid box-3">
+        <div class="container p-0">
+            <div class="row box-3-content">
+                <div class="col-12 text-center">
+                    <div class="d-block d-lg-none form form-3 mx-auto mt-4 mb-5 mx-auto">
+                        <p class="font-sm box-1-card-text pt-5 pb-2">
+                                <span class="font-sm-bold">Оставьте заявку</span> и ваш личный<br>
+                                менеджер расскажет вам, как<br>
+                                практически без рисков получать<br>
+                                <span class="font-sm-bold">15-25%</span> годовых к своим сбережениям
+                        </p>
+                        <input class="my-2" id="inputName2" type="text" placeholder="Имя*"><br>
+                        <input class="my-2" id="inputPhone2" type="tel" placeholder="Номер телефона*"><br>
+                        <button type="button" class="box-1-card-btn btn font-btn my-3">Узнать подробности</button>
+                        <p class="font-smc box-1-card-footer pb-5">
+                            Осталось бесплатных консультаций: <span class="font-sm-bold">7/50</span>
+                        </p>
+                    </div>
+                    <p class="font-sm">Узнайте, как
+                        <span class="font-sm-bold">преумножать капитал</span>
+                        без игр в русскую рулетку и слёз над копейками прибыли.<br>
+                        <span class="font-sm-bold">Прозрачно, законно, не рискуя ни одним рублём.</span><br>
+                        Это вас ни к чему не обязывает.
+                    </p>
+                    <a href="#card" onclick="setFocus()" class=" d-none d-lg-block">
+                        <div class="box-3-btn btn font-btn my-3">
+                            <div class="box-3-btn-bg d-flex align-items-center justify-content-center">
+                                <p>Отправить заявку</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-4">
+        <div class="container">
+                <div class="row py-3">
+                    <div class="col-12 col-lg-2 align-self-center mb-1 mt-5 mb-lg-4 mt-lg-0">
+                        <div class="box-4-logo">
+                            <img src="assets/img/logo.webp" alt="logo">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg align-self-center my-3 mt-51 font-sub-bold box-4-text">
+                        <a href="#">Вакансии</a><br>
+                        <a href="#">Политика конфиденциальности</a><br>
+                        <a class="d-lg-none" href="tel:+7 (495) 208-83-93">+7 (495) 208-83-93</a>
+                    </div>
+                    <!-- clearfix -->
+                    <div class="col-12 d-lg-none"></div>
+                    <div class="col-auto align-self-center ml-auto my-5 my-lg-3 pb-3 pb-lg-0 font-ooo">
+                        <p class="m-0 pb-2">ООО <q>СИРИУС</q></p>
+                        <p class="m-0 bt-1">Адрес: 105066, г.Москва, ул. Нижняя</p>
+                        <p class="m-0">Красносельская, д. 35, стр. 9, этаж 7</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="main.min.js"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-/* Подключение шрифтов */
-
 @font-face {
     font-family: "GeometriaBold";
     src: url('assets/Fonts/Geometria/Geometria-Bold.eot');
@@ -40,392 +38,413 @@
     url('assets/Fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
 }
 
-/* Классы для высоты блоков */
-
-.vh-105 {
-    min-height: 105vh;
+/* Общее */
+html, body{
+    color: #2a2e68;
+    font-family: GilroyRegular, sans-serif;
+    overflow: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.font-bold{
+    font-family: GilroyBold, sans-serif;
 }
 
-.vh-100 {
+.font-btn{
+    font-size: 1.25rem;
+    font-family: GilroyBold, sans-serif;
+}
+
+.font-li{
+    font-size: 2.5rem;
+    font-family: GeometriaHeavy, sans-serif;
+    line-height: 0.8;
+}
+
+.font-ooo {
+    font-size: 0.9375rem;
+    font-family: GilroyRegular, sans-serif;
+}
+
+.font-sub {
+    font-size: 1rem;
+    font-family: GilroyRegular, sans-serif;
+}
+.font-sub-bold {
+    font-size: 1rem;
+    font-family: GilroyBold, sans-serif;
+}
+
+.font-sm {
+    font-size: 1.125rem;
+    font-family: GilroyRegular, sans-serif;
+    line-height: 1.3;
+}
+.font-sm-bold {
+    font-size: 1.125rem;
+    font-family: GilroyBold, sans-serif;
+}
+
+.font-md {
+    font-size: 1.25rem;
+    font-family: GilroyRegular, sans-serif;
+    letter-spacing: .3px;
+}
+
+.font-lg {
+    font-size: 2.25rem;
+    font-family: GeometriaBold, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.4;
+}
+
+.font-xl {
+    font-size: 4.25rem;
+    font-family: GeometriaExtraBold, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1.1;
+}
+
+.font-box-2-header{
+    font-size: 1.875rem;
+    font-family: GeometriaBold, sans-serif;
+    text-transform: uppercase;
+}
+
+p{
+    cursor: default;
+}
+.form{
+    background-color: #f1f5fe;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    border-radius: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+input{
+    color: #3a46bd;
+    width: 95%;
+    height: 3rem;
+    border-radius: 4px;
+    border: 0;
+    padding: 1.5rem;
+}
+input::-moz-placeholder{color: #b1b1b1;}
+input::-webkit-input-placeholder{ color: #b1b1b1; }
+input:-ms-input-placeholder{ color: #b1b1b1; }
+input::-ms-input-placeholder{ color: #b1b1b1; }
+input::placeholder{ color: #b1b1b1; }
+
+input:active, input:hover, input:focus{
+    outline: none;
+    outline-offset: 0;
+}
+a{
+    color: inherit;
+}
+a:active, a:hover, a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn{
+    -webkit-transition: all .6s ease;;
+    -moz-transition: all .6s ease;;
+    -o-transition: all .6s ease;;
+    transition: all .6s ease;
+}
+.btn:hover{
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    color: white;
+}
+
+.rotate-container{
+    transform-style: flat;
+    perspective: 900px;
+
+}
+.rotate{
+    will-change: transform, transition;
+}
+
+.form-1{
+    height: 107vh;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.box-1{
+    height: 100vh;
+    background: url("assets/img/bg_header.webp") no-repeat;
+    background-size: 100% 100%;
+}
+
+.box-1-card{
+    height: 107vh;
+}
+.box-1-card-phone{
+    height: 4rem;
+    color: #3a46bd;
+}
+.box-1-card-phone img{
+    height: 2.5rem !important;
+}
+.box-1-card-text{
+    color: #0b1372;
+}
+.box-1-card-btn{
+    width: 95%;
+    height: 3.6rem;
+    border-radius: 3rem;
+    border: 0;
+    background: linear-gradient(to right, #209bdf, #4f34ad);
+    color: white;
+}
+.box-1-card-footer{
+    color: #4048b8;
+}
+.box-1-card-clearfix{
+    height: 7vh;
+}
+
+.box-1-content{
+    height: 100vh;
+}
+.box-1-content-logo{
+    height: 4rem;
+}
+.box-1-content-logo img {
+    height: 100%;
+}
+.box-1-content-text{
+    color: white;
+    margin: 6em 0;
+}
+.box-1-blue-font-color{
+    color: #b8c6f2;
+}
+.box-1-content-button{
+    background: url("assets/Icons/arrowcircledown_120108.svg") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+/* Второй экрадн */
+.box-2{
     min-height: 100vh;
 }
+.box-2-img img{
+    width: 100%;
+    margin: 30px auto;
 
-.vh-50 {
-    min-height: 50vh;
+    opacity: 0;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(140px);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
 }
-
-.vh-35 {
-    min-height: 35vh;
+.box-2-content{
+    margin: 3em 0;
 }
-.vh-20 {
-    min-height: 20vh;
+.box-2-list-num {
+    color: #cccee3;
+    position: relative;
+    z-index: -1;
+    top: 1.1rem;
+    right: .6rem;
+
+    opacity: 0;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    -ms-transition: all 0.8s ease-out;
+    -o-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
 }
-
-.vh-10 {
-    min-height: 10vh;
-}
-
-/* класс для отсутствия отступа */
-
-.margin-none {
-    margin-bottom: 0 !important;
-}
-
-/* стиль для body позваоляющий добавить анимацию картинки  */
-
-body {
-    transform-style: preserve-3d;
-    transform: perspective(800px);
-}
-
-/*
-Для удобства все пространство страницы поделено на систему блоков:
-block-1 - блок с логотипом, текстом и кнопкой "вниз"
-block-2 - блок обратной связи с полями для ввода
-block-3 - блок с списком
-block-4 - блок с картинкой
-block-5 - блок с текстом внизу страницы и кнопкой обратной связи
-block-6 - блок обратной связи с полями для ввода, появляющийся на маленьких размерах экрана
-block-7 - блок футера
-
-На больших экранах отображаются блоки в вышеуказанном порядке, кроме block-6, в соответствии с макетом.
-На маленьких экранах исчезают block-2 и block-4, а также появляется block-6 в нижней части экрана. 
-
-Также вся страница при отображении на болших экранах для удобства визуально поделена на экраны:
-Первый экран: block-1, block-2
-Второй экран: block-3, block-4
-Третий экран: block-5, block-7
-*/
-
-/* Первый экран */
-
-.block-1 {
-    background: url("assets/img/bg_header.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100vh;
-    min-height: 105vh; 
-    padding-left: 10% !important;
-}
-
-.header-logo {
-    padding-top: 2vh !important;
-    padding-left: 0 !important;
-    min-height: 12vh;
-}
-
-.header-logo img {
-    height: 2.3em;
-}
-
-.header-text {
-    font-size: 1em;
-    min-height: 73vh;
-    padding-top: 15vh;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    color: white;
-}
-
-.header-text-1 {
-    font-family: GeometriaExtraBold;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.header-text-2 {
-    font-family: GeometriaExtraBold;
-    font-size: 4rem;
-    text-transform: uppercase;
-}
-
-.header-text-3 {
-    font-family: GilroyRegular;
-    font-size: 1rem;
-}
-
-.header-button {
-    min-height: 15vh;
-}
-
-.header-button a {
-    height: 2.4rem;
-    width: 2.4rem;
-}
-.header-button img {
-    height: 2.3rem;
-    width: 2.3rem;
-}
-
-.block-2 {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background-color: #f1f5fe;
-}
-
-.header-callback-phone {
-    padding-top: 2% !important;
-    min-height: 12vh;
-    text-align: center;
-}
-
-.header-callback-phone object {
-    height: 2em;
-}
-
-.header-callback-phone span {
-    font-family: 'GilroyBold';
-    color: #3a46bd;
-    vertical-align: 50%;
-}
-
-.header-callback {
-    text-align: center;
-    padding-top: 15vh;
-}
-
-.header-callback p {
-    font-family: "GilroyRegular";
-    color: #000b75;
-}
-
-.header-callback span {
-    font-family: "GilroyBold";
-}
-
-.header-callback-input input {
-    font-family: "GilroyRegular";
-    margin-bottom: 1em;
-    color: #b3b3b3;
-    width: 20rem;
-}
-
-.header-callback-input button {
-    font-family: "GilroyBold";
-    font-size: 1.2em;
-    background: linear-gradient(to right, #209bdf, #4f34ad);
-    background-size: cover;
-    height: 4rem;
-    width: 20rem;
-    border-radius: 2rem;
-    color: white;
-}
-
-.header-callback-input p {
-    font-family: "GilroyRegular";
-    color: #000b75;
-}
-
-.header-callback-input span {
-    font-family: "GilroyBold";
-}
-
-/* Второй экран */
-
-.block-3 {
-    font-size: 1em;
-    padding: 15% 0 !important;
-    padding-bottom: 10% !important;
-    text-indent: 0;
-    color: #000b75;
-}
-
-.block-3 h1 {
-    font-family: "GeometriaBold";
-    text-transform: uppercase;
-}
-
 ol {
-    counter-reset: myCounter;
     padding-inline-start: 0;
-    line-height: 1em;
-    font-family: "GilroyRegular";
+    cursor: default;
 }
-
 li {
     list-style: none;
+    opacity: 0;
+    -webkit-transform: translateX(-40px);
+    -moz-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    -o-transform: translateX(-40px);
+    transform: translateX(-40px);
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -ms-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
 }
 
-.num-position {
-    opacity: .5;
-    font-family: "GeometriaHeavy";
-    font-weight: bolder;
-    font-size: 2.5em;
-    position: relative;
-    top: .25em;
-    right: .25em;
-    left: auto;
+.visible {
+    opacity: 1 !important;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
 }
 
-.block-4 .pic {
-    position: absolute;
-    width: 100%;
-    transition: 0.1s;
-    display: inline-block
-}
-
-/* Третий экран */
-
-.body-bottom-waves {
-    background-image: url("assets/img/waves.png");
+.wave{
+    background: url("assets/img/wave.webp");
     background-size: cover;
     width: 100%;
     height: 0;
-    padding-top: 7.759%;
+    padding-top: 7.759%; /* 150/350 */
 }
 
-.body-bottom-text {
-    background-color: rgba(74, 78, 178, 0.2);
-    height: 15vh;
-    text-align: center;
-    color: #000b75;
+/* Третий экран */
+.box-3{
+    background-color: #dcddf0;
 }
 
-.body-bottom-text span {
-    font-family: "GilroyBold";
+.box-3-content{
+    padding: 3em 0;
 }
-
-.body-bottom-button {
-    background-color: rgba(74, 78, 178, 0.2);
-    min-height: 10vh;
-    text-align: center;
-}
-
-.body-bottom-button button {
-    height: 2.5rem;
-    width: 12rem;
-    background-color: #ddddf0;
-    /* color: #2366d3; */
-    border-radius: 1.25em;
-    font-family: "GilroyBold";
-}
-
-.body-bottom-button-border {
-    display: inline-block;
-    padding: 1rem;
-    position: relative;
+.box-3-btn{
+    width: 16rem;
+    height: 3.6rem;
+    border-radius: 3rem;
+    border: 0;
     background: linear-gradient(to right, #209bdf, #4f34ad);
-    padding: 2px;
-    border-radius: 1.25em;
+    padding: 1px;
 }
-
-.body-bottom-button-border span {
-    background: linear-gradient(to right,#4f9ee2, #3c43ba);
+.box-3-btn-bg{
+    background-color: #dcddf0;
+    border-radius: 3rem;
+    height: 100%;
+    width: 100%;
+}
+.box-3-btn-bg p{
+    margin: 0;
+    color: #209bdf;
+    background: linear-gradient(to right, #209bdf, #4f34ad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-.block-6 {
-    background-color: rgba(74, 78, 178, 0.2);
+.form-3{
+    max-width: 32rem;
+    min-width: 290px;
+}
+.form-3 button{
+    width: 16rem;
+}
+.form-3 input{
+    width: 75%;
 }
 
-.footer-callback {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    background-color: #f1f5fe;
-    max-height: 60vh;
-    max-width: 50vh;
+
+/* Четвёртый экран */
+.box-4{
+    background: url("assets/img/bg_footer.webp") no-repeat;
+    background-size: 100% 100%;
+    color: #b9c7f2;
 }
 
-.footer-callback-text {
-    padding-top: 5%;
-    text-align: center;
+.box-4-logo {
+    height: 3rem;
 }
 
-.footer-callback-phone {
-    padding-top: 2% !important;
-    min-height: 12vh;
-    text-align: center;
+.box-4-logo img {
+    height: 100%;
+}
+.box-4-text{
+    color: #b9c7f2;
 }
 
-.footer-callback-phone object {
-    height: 2em;
-}
-
-.footer-callback-phone span {
-    font-family: 'GilroyBold';
-    color: #3a46bd;
-    vertical-align: 50%;
-}
-
-.footer-callback p {
-    font-family: "GilroyRegular";
-    color: #000b75;
-}
-
-.footer-callback span {
-    font-family: "GilroyBold";
-}
-
-.footer-callback-input input {
-    font-family: "GilroyRegular";
-    margin-bottom: 1em;
-    color: #b3b3b3;
-    width: 20rem;
-}
-
-.footer-callback-input button {
-    font-family: "GilroyBold";
-    font-size: 1.2em;
-    background: linear-gradient(to right, #209bdf, #4f34ad);
-    background-size: cover;
-    height: 4rem;
-    width: 20rem;
-    border-radius: 2rem;
-    color: white;
-}
-
-.footer-callback-input p {
-    font-family: "GilroyRegular";
-    color: #000b75;
-}
-
-.footer-callback-input span {
-    font-family: "GilroyBold";
-}
-
-/* Нижний колонтитул */
-
-.block-7 {
-    background: url("assets/img/bg_footer.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.foot-logo img {
-    height: 2.3em;
-}
-
-.foot-privacy a {
-    
-    font-family: "GilroyBold";
-    color: #b4c8f4;
-    margin-bottom: 0;
-}
-
-.foot-privacy a:hover {
-    text-decoration: none;
-}
-
-.foot-contacts {
-    font-family: "GilroyRegular";
-    color: #b4c8f4;
-    line-height: 1em;
-}
-
-.foot-contacts span {
-    text-transform: uppercase;
-}
-
-/* Реакция на изменение размера экрана */
-
-@media screen and (max-width: 992px) {
-    .wraper { 
-        background-size: 100vw 100vh !important;
+@media (max-width: 992px) {
+    .box-1{
+        min-height: 100vh;
+        height: auto;
+    }
+    .box-1-content {
+        min-height: 100vh;
+        height: auto;
+    }
+    .box-1-content-logo{
+        padding-left: 0 !important;
     }
 }
 
-/* Чеклист:
-подогнать шрифты                    o
-анимация картинки                   x
-анимации переходов                  x
-переработать размер block-6         x
-*/         
+@media (max-width: 768px) {
+    .font-md {
+        font-size: 1.125rem;
+        font-family: GilroyRegular, sans-serif;
+        letter-spacing: 0px;
+    }
+
+    .font-lg {
+        font-size: 1.7rem;
+        font-family: GeometriaBold, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        line-height: 1.4;
+    }
+
+    .font-xl {
+        font-size: 2.7rem;
+        font-family: GeometriaExtraBold, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0px;
+        line-height: 1.1;
+    }
+
+    .font-box-2-header {
+        font-size: 1.81rem;
+        font-family: GeometriaBold, sans-serif;
+        text-transform: uppercase;
+    }
+
+    .box-1-content-logo {
+        height: 3rem;
+    }
+
+    .box-1-content-text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .box-2-img img {
+        margin: 60px auto;
+    }
+
+    .box-2-content{
+        margin-top: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
