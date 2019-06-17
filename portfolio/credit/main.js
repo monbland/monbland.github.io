@@ -120,7 +120,11 @@ button.onclick = function() {
             id: 'dataZoomX',
             type: 'slider',
             xAxisIndex: [0],
-            filterMode: 'filter'
+            filterMode: 'filter',
+            labelFormatter: function (value, index) {
+                var label = momentFormat(dayCount.str[value]);
+                return label;
+            }
         }],
         xAxis: {
             type: 'category',
